@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+				<title>Sessions</title>
+	</head>
+    <body onload="init()" id="body">
+
+		<div id="preloader">
+			<div class="spinner">
+				<div class="cube"></div>
+				<div class="cube"></div>
+				<div class="cube"></div>
+				<div class="cube"></div>
+				<div class="cube"></div>
+				<div class="cube"></div>
+				<div class="cube"></div>
+				<div class="cube"></div>
+				<div class="cube"></div>
+			</div>
+		</div><!--preloader end-->
+
+
+
+		<section id="home">
+			<div data-velocity="-.3" class="home-parallax"></div>
+			<div class="home-overlay"></div>
+
+		<div style="width:100%">
+		  	<nav class="navbar navbar-inverse bg-inverse" role="navigation">
+		    <div class="navbar-header">
+				<a class="navbar-brand" href="index.html">Coinciders</a>
+			</div>
+
+
+		        <ul class="nav navbar-nav navbar-right" style="margin-right:25px">
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="#">Settings</a></li>
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Action</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">Logout</a></li>
+		          </ul>
+
+		  	</nav>
+			</div>
+
+				<table>
+				<tr>
+					<td colspan="8"><!-- TradingView Widget BEGIN -->
+					<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+					<script type="text/javascript">
+					new TradingView.widget({
+					  "width": 1100,
+					  "height": 775,
+					  "symbol": "BITFINEX:BTCUSD",
+					  "interval": "D",
+					  "timezone": "Australia/Sydney",
+					  "theme": "White",
+					  "style": "1",
+					  "locale": "en",
+					  "toolbar_bg": "#f1f3f6",
+					  "enable_publishing": false,
+					  "allow_symbol_change": true,
+					  "withdateranges": true,
+					  "hideideas": true
+					});
+					</script>
+					<!-- TradingView Widget END -->
+					</td>
+					<td></td>
+
+				</table>
+		</section>
+    </body>
+</html>
