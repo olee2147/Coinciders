@@ -1,9 +1,91 @@
-<p id="notice"><%= notice %></p>
+<link href="/assets/style.css" rel="stylesheet" type="text/css" media="screen">
+<link href="/assets/media.css" rel="stylesheet" type="text/css" media="screen">
 
-<p>
-  <strong>Name:</strong>
-  <%= @chatroom.name %>
-</p>
 
-<%= link_to 'Edit', edit_chatroom_path(@chatroom) %> |
-<%= link_to 'Back', chatrooms_path %>
+<section id="home">
+  <div data-velocity="-.3" class="home-parallax"></div>
+  <div class="home-overlay"></div>
+
+<div style="width:100%; margin-bottom:0">
+    <nav class="navbar navbar-inverse bg-inverse" role="navigation">
+    <div class="navbar-header">
+    <a class="navbar-brand" href="index.html">Coinciders</a>
+  </div>
+
+
+        <ul class="nav navbar-nav navbar-right" style="margin-right:25px">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="users/edit">Settings</a></li>
+            <li><a href="#">Coins</a></li>
+            <li><a href="#">Friends</a></li>
+            <li class="divider"></li>
+            <li><a href="users/sign_out" data-method="DELETE">Logout</a></li>
+          </ul>
+
+    </nav>
+  </div>
+
+    <table width="100%" style="table-layout:fixed">
+    <tr>
+      <td colspan="7.5"><!-- TradingView Widget BEGIN -->
+        <!-- TradingView Widget BEGIN -->
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "container_id": 'technical-analysis',
+  "width": 940,
+  "height": 630,
+  "symbol": "BTCUSD",
+  "interval": "D",
+  "timezone": "Australia/Sydney",
+  "theme": "Light",
+  "style": "1",
+  "toolbar_bg": "#f1f3f6",
+  "withdateranges": true,
+  "hide_side_toolbar": false,
+  "allow_symbol_change": true,
+  "save_image": false,
+  "hideideas": true,
+  "show_popup_button": true,
+  "popup_width": "1000",
+  "popup_height": "650"
+});
+</script>
+<!-- TradingView Widget END -->
+</td>
+      <td colspan="4.5" >
+        <div class="chat_window">
+          <div class="top_menu">
+            <div class="buttons">
+              <div class="button close"></div>
+              <div class="button minimize"></div>
+              <div class="button maximize"></div>
+            </div>
+            <div class="title">Chat</div>
+          </div>
+          <ul class="messages"></ul>
+          <div class="bottom_wrapper clearfix">
+            <div class="message_input_wrapper">
+              <input class="message_input" placeholder="Type your message here..." />
+            </div>
+            <div class="send_message">
+              <div class="icon"></div>
+              <div class="text">Send</div>
+            </div>
+          </div>
+        </div>
+        <div class="message_template">
+          <li class="message">
+            <div class="avatar">
+            </div><div class="text_wrapper">
+              <div class="text">
+              </div>
+            </div>
+          </li>
+        </div>
+      </td>
+
+    </table>
+</section>

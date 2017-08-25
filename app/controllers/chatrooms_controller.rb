@@ -1,7 +1,7 @@
 class ChatroomsController < ApplicationController
-  before_action :set_chatroom, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-
+#:set_chatroom,
+  before_action only: [:show, :edit, :update, :destroy]
+  #before_action :authenticate_user!
   # GET /chatrooms
   # GET /chatrooms.json
   def index
@@ -11,6 +11,8 @@ class ChatroomsController < ApplicationController
   # GET /chatrooms/1
   # GET /chatrooms/1.json
   def show
+    #@messages = @chatroom.messages.order(created_at: :desc).limit(100)
+    #@chatroom_user = current_user.chatroom_users.find_by(chatroom_id: @chatroom_id)
   end
 
   # GET /chatrooms/new
@@ -64,12 +66,12 @@ class ChatroomsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_chatroom
-      @chatroom = Chatroom.find(params[:id])
-    end
+    #def set_chatroom
+    #   @chatroom = Chatroom.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chatroom_params
-      params.require(:chatroom).permit(:name)
+      params.require(:chatroom).permit(:username)
     end
 end

@@ -1,0 +1,61 @@
+		<section id="home">
+			<div data-velocity="-.3" class="home-parallax"></div>
+			<div class="home-overlay"></div>
+
+		<div style="width:100%">
+		  	<nav class="navbar navbar-inverse bg-inverse" role="navigation">
+		    <div class="navbar-header">
+				<a class="navbar-brand" href="index.html">Coinciders</a>
+			</div>
+
+
+		        <ul class="nav navbar-nav navbar-right" style="margin-right:25px">
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="users/edit">Settings</a></li>
+		            <li><a href="#">Coins</a></li>
+		            <li><a href="#">Friends</a></li>
+		            <li class="divider"></li>
+		            <li><a href="users/sign_out" data-method="DELETE">Logout</a></li>
+		          </ul>
+
+		  	</nav>
+			</div>
+
+				<table>
+				<tr>
+					<td colspan="8"><!-- TradingView Widget BEGIN -->
+            <!-- TradingView Widget BEGIN -->
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget({
+    	"container_id": 'technical-analysis',
+    	"width": 1000,
+    	"height": 775,
+    	"symbol": "BTCUSD",
+    	"interval": "D",
+    	"timezone": "Australia/Sydney",
+    	"theme": "Light",
+    	"style": "1",
+    	"toolbar_bg": "#f1f3f6",
+    	"withdateranges": true,
+    	"hide_side_toolbar": false,
+    	"allow_symbol_change": true,
+    	"save_image": false,
+    	"hideideas": true,
+    	"show_popup_button": true,
+    	"popup_width": "1000",
+    	"popup_height": "650"
+    });
+    </script>
+    <!-- TradingView Widget END -->
+    </td>
+					<td><p id="notice"><%= notice %></p>
+              <p><strong>Username:</strong>
+                 <%= @chatroom.username %></p>
+      <%= link_to 'Edit', edit_chatroom_path(@chatroom) %> |
+      <%= link_to 'Back', chatrooms_path %></td>
+
+				</table>
+		</section>
